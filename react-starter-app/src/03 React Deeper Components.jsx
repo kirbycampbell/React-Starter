@@ -64,3 +64,36 @@ handleDelete = counterId => {
     // or to simplify the above since they are the same
     this.setState({ counters });
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// 8). To simplify the parent component attaching all props you can just do:::
+<Counter key={counter.id} onDelete={this.handleDelete} counter={counter} />
+// The above passes all parts of the component to it.  Includes all counter data. 
+//But with that change must change stuff in counter.jsx ::
+state = {
+    value: this.props.counter.value
+} // do the same whereever else that shows up
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// 9). Removing the local state in order to make a single sorce of truth:
+
+//  in counter.jsx (child) remove the state and remove the functions that call upon the state.
+//  And in the buttons change onClick to 
+
+onClick={() => this.props.onIncrement(this.props.counter)}
+
+//   This now connects it to its parent for management. 
+//    Do the same for all this.state and change to this.props.counter
+//      Now in parent - change the handleIncrement function to::::
+
+handleIncrement = counter => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = {...counter};
+    counters[index].value++;
+    this.setState({ counters });
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
