@@ -1,4 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const element = <h1>Hello World</h1>;
-ReactDOM.render(element, document.getElementById("root"));
+
+import App from "./App";
+import Pieces from "./pieces";
+
+ReactDOM.render(<App />, document.getElementById("root"));
