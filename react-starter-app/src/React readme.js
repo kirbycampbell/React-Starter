@@ -1,6 +1,6 @@
 /* React with Mosh Readme:::
 
- Components are reusable elements.  
+ 0). Components are reusable elements.  
  The app.js holds a tree of components.  
  Component would be like navbar, tweets, profile, world, and feed.  
  Under feed could have a comment and like emoji. 
@@ -23,12 +23,6 @@ console.log(element);
 Check out the props.  
 This is what Props are!  
 Check out index1.js in React-starter-app for an example. 
-
-Side Note on Javascript::: */
-const activeJobs = jobs.filter(function(job) {
-  return job.isActive;
-}); //is same as:
-const activeJobs = jobs.filter(job => job.isActive); //which is modern ES6 arrow function syntax.
 
 /*
 
