@@ -13,3 +13,15 @@ imrc; // and tab for import react statement
 
 // Class component statement::
 cc; //for class component declaration.
+
+////////////////////////////////////////////////////////////////////////
+
+// Select Every occurrence of a word and use multiple cursors:
+// USE CTRL + d  possibly multiple times to select more
+
+////////////////////////////////////////////////////////////////////////
+
+// To auto Set up some html stuff:
+// table.table>thead>tr>td*4  + tab will create a table with class table, containing thead with tr and 4 td
+
+////////////////////////////////////////////////////////////////////////

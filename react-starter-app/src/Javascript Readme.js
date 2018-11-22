@@ -78,4 +78,7 @@ class Teacher extends Person {
 export class Teacher extends Person {
 // In teacher.js you would put :
 import { person } from './person';
-// In index.js you would import teacher and make your calls in index.js
+// In index.js you would import teacher or any other object and make your calls in index.js
+
+////////////////////////////////////////////////////////////////////////
+
